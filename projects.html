@@ -93,7 +93,7 @@
       <ul>
         <li class="animate-box"><a href="index.html" class="transition">Home</a></li>
         <li class="animate-box fh5co-active"><a href="projects.html" class="transition">Projects</a></li>
-        <li class="animate-box"><a href="activities.html" class="transition">Activities</a></li>
+        <li class="animate-box"><a href="outreach.html" class="transition">Outreach</a></li>
       </ul>
       <a class="style-toggle js-style-toggle" data-style="default" href="#">
         <span class="fh5co-circle"></span>
@@ -129,45 +129,51 @@
       <div class="container">
         <div class="row row-bottom-padded-sm animate-box">
           <div class="col-md-2">
-            <h3 class="fh5co-section-heading"> Contents </h3>
+            <h3 class="fh5co-section-heading"> Contents of Projects that I've Done </h3>
           </div>
           <div class="col-md-10">
             <ul class="fh5co-stack">
               <li><p>
-                <span class="fh5co-lead"><a href="#proj-pj6">
-                  Seaching for Possibly Missing Globular Clusters
+                <span class="fh5co-lead"><a href="#proj-pj7">
+                  Classification of RR Lyrae Variable Stars
                 </a></span><br>
-                Imaging Processing | Poisson Statistics
+                Machine Learning | Time-domain | PostgreSQL | Scikit-Learn | Fourier Series | Big Data
               </p></li>
-							<li><p>
-                <span class="fh5co-lead"><a href="#proj-pj5">
+              <li><p>
+                <span class="fh5co-lead"><a href="#proj-pj6">
                   Hyperpartisan News Classification
                 </a></span><br>
-                Deep Learning | Natural Language Processing | Data Augmentation
+                Natural Language Processing | Convolutional Neural Networks | Data Augmentation | Pytorch
+              </p></li>
+              <li><p>
+                <span class="fh5co-lead"><a href="#proj-pj5">
+                  Search for Globular Clusters around Dwarf Galaxies
+                </a></span><br>
+                Kernel Density Estimation | Bayesian Analysis | Statistical Modeling | PostgreSQL | Big Data
               </p></li>
               <li><p>
                 <span class="fh5co-lead"><a href="#proj-pj4">
                   Supermassive Black Holes in Cosmological Simulations
                 </a></span><br>
-                Numerical Analysis | Parallel Computing
+                Computational astrophysics | MPI
               </p></li>
               <li><p>
                 <span class="fh5co-lead"><a href="#proj-pj3">
-                  Supermassive Black Hole-Galaxy Relations
+                  Scaling Relations between Supermassive Black Holes and Galaxies
                 </a></span><br>
-                Data Analysis
+                Statistical Modeling | Big Data | Computational astrophysics
               </p></li>
               <li><p>
                 <span class="fh5co-lead"><a href="#proj-pj2">
                   Numerically Solving the Schrodinger Equation
                 </a></span><br>
-                Numerical Analysis | Parallel Computing
+                Computational astrophysics | MPI
               </p></li>
               <li><p>
                 <span class="fh5co-lead"><a href="#proj-pj1">
                   Structure of the Universe with Quantum Wave Dark Matter
                 </a></span><br>
-                Data Analysis
+                Data Analysis | computational astrophysics
               </p></li>
             </ul>
           </div>
@@ -183,21 +189,51 @@
 
 
         <!-- project -->
+        <a name="proj-pj7"></a>
+        <div class="row row-bottom-padded-sm animate-box">
+          <div class="col-md-5">
+            <div class="img-holder-2 animate-box">
+              <img src="images/pj-7.png" height=100% width=100%>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h3>Classification of RR Lyrae Variable Stars with Machine Learning</h3>
+            <a>Apr 2020 – Present: PhD Research Project</a>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              As a type of variable stars, RR Lyrae variables have a unique
+              period range and magnitude range, which makes it a useful tool in
+              astrophysics. Utilizing the billion-source time-domain ZTF sky
+              survey (ZTF DR2), we created a hundred-billion-source training set
+              selected by their color. For the sources in the training set, we
+              fit their light curves using Fourier series with the minimum
+              chi-square to obtain features of the sources. Using these
+              features, we trained a baseline model with random forest to
+              classify RR Lyrae stars with an accuracy of 70%.
+            </p>
+            <!-- TODO link to https://github.com/kuanweih/KDE-Detector -->
+          </div>
+        </div>
+        <!-- project -->
+
+
+        <!-- project -->
         <a name="proj-pj6"></a>
         <div class="row row-bottom-padded-sm animate-box">
           <div class="col-md-7">
-            <a>PhD Research Project (in progress)</a>
-            <h3>Searching for Possibly Missing Globular Clusters Associated with the Milky Way Satellites</h3>
-            <p>
-              There may have been more globular clusters (GCs) lurking around the Milky Way satellite galaxies.
-              Using the kernel density estimation and the Poisson statistics of stellar number counts to
-              identify stellar density peaks, I have been developing a program to search for possibly hiding GCs.
-              Selecting useful data from more than 1.7 billion astronomical objects in the
-              <a href="http://sci.esa.int/gaia/" target="_blank"> GAIA mission</a>,
-              I have conducted the searching program on the targeted area near 56 Milky Way dwarf galaxies.
-              More detail will come out soon :)
+            <h3>Hyperpartisan News Classification with Convolutional Neural Networks</h3>
+            <a>Feb 2019 – May 2019: CMU 10707 Deep Learning</a>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              Systematic targeting of hyperpartisan news can be used for propagandic purposes.
+							We utilize <a href="https://pan.webis.de/semeval19/semeval19-web/" target="_blank"> the SemEval 2019 competetion</a>
+              and use <a href="https://github.com/GateNLP/semeval2019-hyperpartisan-bertha-von-suttner" target="_blank"> the winning entry</a>
+              with a validation accuracy of 81% as our baseline model.
+              We improve the model to the accuracy of 85% by
+              (1) using <a href="https://arxiv.org/abs/1802.05365" target="_blank">ELMo</a>
+                  to achieve sentence-level embeddings,
+              (2) augmenting the dataset in English via back-translation of French and German using <a href="https://arxiv.org/abs/1706.03762" target="_blank"> the Transformer models</a>,
+              (3) using CNNs hierarchically to get document-level representations from sentence-level representations.
+              <a href="https://drive.google.com/file/d/14S9A9a94khQfcFgrwtVJu6WowkieZO9p/view?usp=sharing" target="_blank">Click for the final report.</a>
             </p>
-            <!-- TODO link to https://github.com/kuanweih/KDE-Detector -->
           </div>
           <div class="col-md-5">
             <div class="img-holder-2 animate-box">
@@ -217,26 +253,17 @@
             </div>
           </div>
           <div class="col-md-7">
-            <a>Course Project: CMU 10707 Deep Learning</a>
-            <h3>Hyperpartisan News Classification</h3>
-            <p>
-              There is a lot of information that we are exposed to every day. Some are neutral. Some are not.
-              This task is to determine whether or not a news article text follows a hyperpartisan
-              argumentation. This topic originates from
-              <a href="https://pan.webis.de/semeval19/semeval19-web/" target="_blank"> the SemEval 2019 competetion</a>
-              and we use
-              <a href="https://github.com/GateNLP/semeval2019-hyperpartisan-bertha-von-suttner" target="_blank">
-                the winning entry
-              </a>
-              of 82% accuracy as the baseline model. We have improved the model with an accuracy of 85% by
-              (1) using <a href="https://arxiv.org/abs/1802.05365" target="_blank">ELMo</a>
-                  to generate sentence level embeddings,
-              (2) augmenting dataset via back-translation,
-              (3) using CNNs hierarchically to generate a document level representation from word-embeddings.
-              <a href="https://drive.google.com/file/d/14S9A9a94khQfcFgrwtVJu6WowkieZO9p/view?usp=sharing" target="_blank">
-                Click for the final report.
-              </a>
+            <h3>Search for Globular Clusters around Dwarf Galaxies using Kernel Density Estimation</h3>
+            <a>Sep 2018 – May 2020: PhD Research Project</a>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              Globular clusters are bright, old, and compact astronomical objects, whose formation remains mysterious.
+              Until very recent, there has been globular clusters being found still.
+              To systemically search them utilizing the billion-source whole-sky <a href="http://sci.esa.int/gaia/" target="_blank"> GAIA mission</a>,
+              we targeted the most likely areas they might be lurking: around the dwarf galaxies.
+              These areas are also the hardest to search through the traditional imaging method because they are bright.
+              We identify candidates with kernel density estimation of the stellar number counts and model their specific frequency using Bayesian analysis and provide 90% credible intervals.
             </p>
+            <!-- TODO link to https://github.com/kuanweih/KDE-Detector -->
           </div>
         </div>
         <!-- project -->
@@ -246,16 +273,12 @@
         <a name="proj-pj4"></a>
         <div class="row row-bottom-padded-sm animate-box">
           <div class="col-md-7">
-            <a>PhD Research Project</a>
-            <h3>The Growth of Supermassive Black Holes in Cosmological Hydrodynamic Simulations</h3>
+            <h3>Supermassive Black Holes in Constrained Cosmological Hydrodynamic Simulations</h3>
+            <a>Dec 2017 – Aug 2018: PhD Research Project</a>
             <p>
-              There are different scenarios in the formation of supermassive black holes (SMBHs).
-              However, it remains unknown due to the lack of observation in the early universe.
-              Moreover, running multiple cosmological hydrodynamic simulations are too expensive to
-              examine the scenarios. With the help of the constrained Gaussian realization, we can
-              reduce the computational demand by a factor of ~20000. We then have conducted multiple
-              cosmological simulations with more than ~1000 CPU hours to study the growth of SMBHs with
-              different seeding scenarios. The result is published in <a href="#pub-3">[3]</a>.
+              I conduct multiple cosmological hydrodynamic simulations, which totally consume more than ~1000
+              CPU hours, to study the growth of supermassive black holes with different black hole seeds.
+              TBA...
             </p>
           </div>
           <div class="col-md-5">
@@ -276,16 +299,13 @@
             </div>
           </div>
           <div class="col-md-7">
-            <a>PhD Research Project</a>
-            <h3>Establishing Supermassive Black Hole-Galaxy Relations in BlueTides Simulation</h3>
+            <h3>Scaling Relations between Supermassive Black Holes and Galaxies in the BlueTides Simulation</h3>
+            <a>Jan 2017 – Dec 2017: PhD Research Project</a>
             <p>
-              Observed in the current nearby universe, the scaling relations between the supermassive black
-              holes (SMBHs) and their host galaxies tell the connection between them. What about the earlier
-              universe? We use 5000 resolved galaxies in
-              <a href="http://bluetides-project.org/" target="_blank">the BlueTides simulation</a>,
-              which contains ~700 billion particles, to establish scaling relations with the mass of SMBHs and
-              their host galaxy properties. Interestingly, the scaling relations we found in the early universe
-              are consistent with existing ones from observations. The result is published in <a href="#pub-2">[2]</a>.
+              We use <a href="http://bluetides-project.org/" target="_blank">the BlueTides simulation</a>, which
+              contains ~700 billion particles, to establish scaling relations with the mass of supermassive black
+              holes <a href="#pub-2">[2]</a>. We analyze severel black hole and galaxy quantities and different
+              selection rules to study why the scaling relations are more scattered compared to observational results.
             </p>
           </div>
         </div>
@@ -296,14 +316,15 @@
         <a name="proj-pj2"></a>
         <div class="row row-bottom-padded-sm animate-box">
           <div class="col-md-7">
-            <a>MS Thesis</a>
-            <h3>Numerically Solving the Schrodinger Equation in the Hydrodynamic Form</h3>
+            <h3>Numerically Solving the Schrodinger Equation in Hydrodynamic Form</h3>
+            <a>Aug 2015 – Jul 2016: MS Thesis</a>
             <p>
-              Quantum wave dark matter (&#968;DM) has predicted the large-scale structure consistent with the
-              cold dark matter but a completely different small-scale structure. However, &#968;DM is too
-              computational expensive due to its quantum nature. Treating the &#968;DM as quantum fluid, I
-              have modified MPI software to try to solve the Schrodinger-Poisson equation in the hydrodynamic
-              form by adding numerical diffusion, changing the mathematical form, and regularizing the flux term.
+              By treating the quantum wave dark matter as quantum fluid, I modify a MPI code to numerically solve
+              the Schrodinger-Poisson equation in hydrodynamic form by the Lax–Wendroff method to simulate the
+              structure of the Universe. We improve the original fluid solver by
+							(1) adding numerical diffusion,
+							(2) changing the mathematical form,
+							(3) regularizing the flux term.
               <a href="https://drive.google.com/file/d/1absBHGtzgtjx-29yavRee0BzzDPGvb11/view?usp=sharing" target="_blank">
                 Click to see the thesis.
               </a>
@@ -327,14 +348,12 @@
             </div>
           </div>
           <div class="col-md-7">
-            <a>My 1st Research Project</a>
             <h3>The Structure of the Universe with Quantum Wave Dark Matter (&#968;DM)</h3>
+            <a>Sep 2014 – Jul 2015: My 1st Research Project</a>
             <p>
-              The cold dark matter (CDM) has succeeded in many aspects to explain the large-scale structure
-              of the universe. However, it is not perfect when it comes to small scales. Governed by different
-              physics principles, the quantum wave dark matter (&#968;DM) has predicted consistent large-scale
-              structures with the CDM. We find that &#968;DM can further predict different small-scale structures
-              to handle the issues CDM cannot deal with. The result is published in <a href="#pub-1">[1]</a>.
+              &#968;DM could be ultra light scalar particles whose wave length is astronomical. We find that
+              &#968;DM predicts different small-scale structures while maintaining the same large-scale
+              structures compared to the traditional CDM Universe in <a href="#pub-1">[1]</a>.
             </p>
           </div>
         </div>
@@ -356,18 +375,6 @@
             <h3 class="fh5co-section-heading">Publications</h3>
           </div>
           <div class="col-md-10">
-            <!-- paper -->
-            <p align="left">
-              <a name="pub-3"></a>
-              [3].
-              <a href="https://arxiv.org/abs/1906.00242" target="_blank">
-                The early growth of supermassive black holes in cosmological hydrodynamic
-                simulations with constrained Gaussian realizations.
-              </a><br>
-              K.-W. Huang, Y. Ni, Y. Feng, and T. Di Matteo.<br>
-              arXiv:1906.00242.
-            </p>
-            <!-- paper -->
             <p align="left">
               <a name="pub-2"></a>
               [2].
@@ -377,7 +384,6 @@
               K.-W. Huang, T. Di Matteo, A. K. Bhowmick, Y. Feng, and C.-P. Ma. <br>
               MNRAS, Volume 478, Issue 4, Pages 5063–5073, August 2018.
             </p>
-            <!-- paper -->
             <p align="left">
               <a name="pub-1"></a>
               [1].
@@ -387,6 +393,7 @@
               H.-Y. Schive, T. Chiueh, T. Broadhurst, and K.-W. Huang. <br>
               ApJ, 818:89, February 2016.
             </p>
+            <!-- <p><a href="http://freehtml5.co" target="_blank">http://freehtml5.co</a></p> -->
           </div>
         </div>
       </div>
