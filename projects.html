@@ -200,15 +200,10 @@
             <h3>Classification of RR Lyrae Variable Stars with Machine Learning</h3>
             <a>Apr 2020 – Present: PhD Research Project</a>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-              As a type of variable stars, RR Lyrae variables have a unique
-              period range and magnitude range, which makes it a useful tool in
-              astrophysics. Utilizing the billion-source time-domain ZTF sky
-              survey (ZTF DR2), we created a hundred-billion-source training set
-              selected by their color. For the sources in the training set, we
-              fit their light curves using Fourier series with the minimum
-              chi-square to obtain features of the sources. Using these
-              features, we trained a baseline model with random forest to
-              classify RR Lyrae stars with an accuracy of 70%.
+              As a type of variable stars, RR Lyrae variables have a unique period range and magnitude range, which makes it a useful tool in astrophysics.
+              Utilizing the billion-source time-domain ZTF sky survey (ZTF DR2), we created a hundred-billion-source training set selected by their color.
+              For the sources in the training set, we fit their light curves using Fourier series with the minimum chi-square to obtain features of the sources.
+              Using these features, we trained a baseline model with random forest to classify RR Lyrae stars with an accuracy of 70%.
             </p>
             <!-- TODO link to https://github.com/kuanweih/KDE-Detector -->
           </div>
@@ -237,7 +232,7 @@
           </div>
           <div class="col-md-5">
             <div class="img-holder-2 animate-box">
-              <img src="images/pj-6.png" height=100% width=100%>
+              <img src="images/pj-5.png" height=100% width=100%>
             </div>
           </div>
         </div>
@@ -249,7 +244,7 @@
         <div class="row row-bottom-padded-sm animate-box">
           <div class="col-md-5">
             <div class="img-holder-2 animate-box">
-              <img src="images/pj-5.png" height=100% width=100%>
+              <img src="images/pj-6.png" height=100% width=100%>
             </div>
           </div>
           <div class="col-md-7">
@@ -257,11 +252,12 @@
             <a>Sep 2018 – May 2020: PhD Research Project</a>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
               Globular clusters are bright, old, and compact astronomical objects, whose formation remains mysterious.
-              Until very recent, there has been globular clusters being found still.
+              Until very recent, there have been globular clusters still being found.
               To systemically search them utilizing the billion-source whole-sky <a href="http://sci.esa.int/gaia/" target="_blank"> GAIA mission</a>,
               we targeted the most likely areas they might be lurking: around the dwarf galaxies.
-              These areas are also the hardest to search through the traditional imaging method because they are bright.
+              These areas are also the hardest to search through the traditional imaging investigation because they are bright.
               We identify candidates with kernel density estimation of the stellar number counts and model their specific frequency using Bayesian analysis and provide 90% credible intervals.
+              <a href="#pub-4"> Click to see the journal paper [4]. </a>
             </p>
             <!-- TODO link to https://github.com/kuanweih/KDE-Detector -->
           </div>
@@ -275,10 +271,12 @@
           <div class="col-md-7">
             <h3>Supermassive Black Holes in Constrained Cosmological Hydrodynamic Simulations</h3>
             <a>Dec 2017 – Aug 2018: PhD Research Project</a>
-            <p>
-              I conduct multiple cosmological hydrodynamic simulations, which totally consume more than ~1000
-              CPU hours, to study the growth of supermassive black holes with different black hole seeds.
-              TBA...
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              Studying the growth of extremely supermassive black holes in traditional large volume simulations is prohibit due to the extreme computational cost.
+              Instead, we utilize the constrained Gaussian realizations to increase local overdensity to induce a density peak that is dense enough to grow supermassive black holes in a small volume.
+              This reduces the computational cost from billions to ten thousand CPU hours, making the investigation of supermassive black hole growth doable.
+              We design 8 cosmological hydrodynamic simulations with different black hole scenarios to invesitage the existing black hole seed mass range.
+              <a href="#pub-3"> Click to see the journal paper [3]. </a>
             </p>
           </div>
           <div class="col-md-5">
@@ -301,11 +299,14 @@
           <div class="col-md-7">
             <h3>Scaling Relations between Supermassive Black Holes and Galaxies in the BlueTides Simulation</h3>
             <a>Jan 2017 – Dec 2017: PhD Research Project</a>
-            <p>
-              We use <a href="http://bluetides-project.org/" target="_blank">the BlueTides simulation</a>, which
-              contains ~700 billion particles, to establish scaling relations with the mass of supermassive black
-              holes <a href="#pub-2">[2]</a>. We analyze severel black hole and galaxy quantities and different
-              selection rules to study why the scaling relations are more scattered compared to observational results.
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              Supermassive black hole-galaxy relations has been proposed in low redshift.
+              Due their rareness and the observational obstacles. whether or not the relations hold in high redshift remains unknown.
+              We analuze 5000 black holes and their host galaxies in the 700-billion-particle <a href="http://bluetides-project.org/" target="_blank">the BlueTides simulation</a>
+              and establish the scaling relations in high redshift which is consistent with the low-redshift observational results.
+              However, the scatter of our relations are more scattered than the one from the observations.
+              We invesitage the properties of the black holes and galaxies, finding the gas fraction of galaxies highly correlated to the scatter of the galaxies from the relations.
+              <a href="#pub-2"> Click to see the journal paper [2]. </a>
             </p>
           </div>
         </div>
@@ -318,13 +319,13 @@
           <div class="col-md-7">
             <h3>Numerically Solving the Schrodinger Equation in Hydrodynamic Form</h3>
             <a>Aug 2015 – Jul 2016: MS Thesis</a>
-            <p>
-              By treating the quantum wave dark matter as quantum fluid, I modify a MPI code to numerically solve
-              the Schrodinger-Poisson equation in hydrodynamic form by the Lax–Wendroff method to simulate the
-              structure of the Universe. We improve the original fluid solver by
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              The interference property of quantum wave dark matter makes it too computational expensice to solve the Schrodinger-Poisson equation directly to simulate the universe.
+              Treating the quantum wave dark matter as quantum fluid, I refactor an MPI hydrodynamic solver in C to solve the Schrodinger-Poisson equation.
+              We improve the original fluid solver by
 							(1) adding numerical diffusion,
 							(2) changing the mathematical form,
-							(3) regularizing the flux term.
+							(3) regularizing the flux term, to avoid crushing from voids.
               <a href="https://drive.google.com/file/d/1absBHGtzgtjx-29yavRee0BzzDPGvb11/view?usp=sharing" target="_blank">
                 Click to see the thesis.
               </a>
@@ -350,10 +351,12 @@
           <div class="col-md-7">
             <h3>The Structure of the Universe with Quantum Wave Dark Matter (&#968;DM)</h3>
             <a>Sep 2014 – Jul 2015: My 1st Research Project</a>
-            <p>
-              &#968;DM could be ultra light scalar particles whose wave length is astronomical. We find that
-              &#968;DM predicts different small-scale structures while maintaining the same large-scale
-              structures compared to the traditional CDM Universe in <a href="#pub-1">[1]</a>.
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              &#968;DM could be ultra light scalar particles whose wave length is astronomical.
+              With the completely different physics compared to the traditional cold dark matter (CMD), &#968;DM surprisingly predicts the similar structure of the universe in the large scale.
+              However in the small scale, the predicted structure is different from CDM's prediction.
+              This potentially address the issues in the small scale of CDM.
+              <a href="#pub-1"> Click to see the journal paper [1]. </a>
             </p>
           </div>
         </div>
@@ -376,22 +379,36 @@
           </div>
           <div class="col-md-10">
             <p align="left">
-              <a name="pub-2"></a>
-              [2].
-              <a href="https://academic.oup.com/mnras/article/478/4/5063/4999928" target="_blank">
-                BlueTides simulation: establishing black hole-galaxy relations at high-redshift.
+              <a name="pub-4"></a>
+              <a href="https://arxiv.org/abs/2005.14014" target="_blank">
+                [4]. Search for globular clusters associated with the Milky Way dwarf galaxies using GAIA DR2.
               </a><br>
-              K.-W. Huang, T. Di Matteo, A. K. Bhowmick, Y. Feng, and C.-P. Ma. <br>
-              MNRAS, Volume 478, Issue 4, Pages 5063–5073, August 2018.
+              K-W. Huang, S. Koposov. <br>
+              Submitted to Monthly Notices of the Royal Astronomical Society, May 2020.
+            </p>
+            <p align="left">
+              <a name="pub-3"></a>
+              <a href="https://academic.oup.com/mnras/article/496/1/1/5851290" target="_blank">
+                [3]. The early growth of supermassive black holes in cosmological hydrodynamic simulations with constrained Gaussian realizations.
+              </a><br>
+              K-W. Huang, Y. Ni, Y. Feng, T. Di Matteo. <br>
+              Monthly Notices of the Royal Astronomical Society, vol. 496, no. 1, pp. 1–12, Jul 2020.
+            </p>
+            <p align="left">
+              <a name="pub-2"></a>
+              <a href="https://academic.oup.com/mnras/article/478/4/5063/4999928" target="_blank">
+                [2]. BlueTides simulation: establishing black hole-galaxy relations at high-redshift.
+              </a><br>
+              K-W. Huang, T. Di Matteo, A. K Bhowmick, Y. Feng, C-P. Ma. <br>
+              Monthly Notices of the Royal Astronomical Society, vol. 478, no. 4, pp. 5063–5073, Aug 2018.
             </p>
             <p align="left">
               <a name="pub-1"></a>
-              [1].
-              <a href="https://arxiv.org/abs/1508.04621" target="_blank">
-                Contrasting Galaxy Formation from Quantum Wave Dark Matter, ψDM, with ΛCDM, using Planck and Hubble Data.
+              <a href="https://iopscience.iop.org/article/10.3847/0004-637X/818/1/89" target="_blank">
+                [1]. Contrasting Galaxy Formation from Quantum Wave Dark Matter, ψDM, with ΛCDM, using Planck and Hubble Data.
               </a><br>
-              H.-Y. Schive, T. Chiueh, T. Broadhurst, and K.-W. Huang. <br>
-              ApJ, 818:89, February 2016.
+              H-Y. Schive, T. Chiueh, T. Broadhurst, K-W. Huang. <br>
+              The Astrophysical Journal, vol. 818, no. 1, pp. 89, Feb 2016.
             </p>
             <!-- <p><a href="http://freehtml5.co" target="_blank">http://freehtml5.co</a></p> -->
           </div>
