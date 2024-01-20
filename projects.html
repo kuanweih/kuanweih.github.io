@@ -182,23 +182,24 @@
         <!-- project -->
         <a name="proj-pj9"></a>
         <div class="row row-bottom-padded-sm animate-box">
-          <div class="col-md-5">
+          <div class="col-md-4">
             <div class="img-holder-2 animate-box">
               <img src="images/pj-9.png" height=100% width=100%>
             </div>
           </div>
-          <div class="col-md-7">
-            <h3>LenSiam</h3>
-            <a>Apr 2020 – Present: PhD Research Project</a>
-            <!-- update time -->
+          <div class="col-md-8">
+            <h4> Self-Supervised Learning Representations of Gravitational Lens Images: LenSiam </h4>
+            <h3 class="fh5co-section-heading"> Feb 2023 – Nov 2023: Independent Research </h3>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-              As a type of variable stars, RR Lyrae variables have a unique period range and magnitude range, which makes it a useful tool in astrophysics.
-              Utilizing the billion-source time-domain <a href="https://www.ztf.caltech.edu/" target="_blank"> ZTF sky survey</a>,
-              we created a hundred-billion-source training set selected by their color.
-              For the sources in the training set, we fit their light curves using the Fourier series with the minimum chi-square to obtain features of the sources.
-              Using these features, we trained a baseline model with random forest to classify RR Lyrae stars with an accuracy of 70%.
+              Self-supervised learning is known for learning good representations from data without
+              labels. We explore the simple siamese architecture, SimSiam, for representation
+              learning on strong gravitational lens images. Commonly used image augmentations tend
+              to change lens properties. Thus we introduce a novel lens augmentation method to 
+              preserve lens properties by fixing the lens model while varying the source galaxies. 
+              We name it LenSiam. LenSiam learns good lens image representations and can benefit
+              downstream tasks.
             </p>
-            <!-- TODO link to https://github.com/kuanweih/KDE-Detector -->
+            <!-- TODO link to https://github.com/kuanweih/LenSiam -->
           </div>
         </div>
         <!-- project -->
@@ -207,23 +208,26 @@
         <!-- project -->
         <a name="proj-pj8"></a>
         <div class="row row-bottom-padded-sm animate-box">
-          <div class="col-md-7">
-            <h3>Hyperpartisan News Classification with Convolutional Neural Networks</h3>
-            <a>Feb 2019 – May 2019: CMU 10707 Deep Learning</a>
+          <div class="col-md-8">
+            <h4> Estimating the Physical Parameters of Gravitational Lens Images using Vision Transformer </h4>
+            <h3 class="fh5co-section-heading"> Jan 2022 – Aug 2022: Independent Research </h3>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-              Systematic targeting of hyperpartisan news can be used for propagandistic purposes.
-							We utilize <a href="https://pan.webis.de/semeval19/semeval19-web/" target="_blank"> the SemEval 2019 competition</a>
-              and use <a href="https://github.com/GateNLP/semeval2019-hyperpartisan-bertha-von-suttner" target="_blank"> the winning entry</a>
-              with a validation accuracy of 81% as our baseline model.
-              We improve the model to the accuracy of 85% by
-              (1) using <a href="https://arxiv.org/abs/1802.05365" target="_blank">ELMo</a>
-                  to achieve sentence-level embeddings,
-              (2) augmenting the dataset in English via back-translation of French and German using <a href="https://arxiv.org/abs/1706.03762" target="_blank"> the Transformer models</a>,
-              (3) using CNNs hierarchically to get document-level representations from sentence-level representations.
-              <a href="https://drive.google.com/file/d/14S9A9a94khQfcFgrwtVJu6WowkieZO9p/view?usp=sharing" target="_blank">Click for the final report.</a>
+              Quantifying the parameters and corresponding uncertainties of hundreds of strongly 
+              lensed quasar systems holds the key to resolving one of the most important scientific
+              questions: the Hubble constant tension. The commonly used Markov chain Monte Carlo 
+              (MCMC) method has been too time-consuming to achieve this goal, yet recent work has 
+              shown that convolution neural networks (CNNs) can be an alternative with seven orders
+              of magnitude improvement in speed. With 31,200 simulated strongly lensed quasar 
+              images, we explore the usage of Vision Transformer (ViT) for simulated strong 
+              gravitational lensing for the first time. We show that ViT could reach competitive 
+              results compared with CNNs, and is specifically good at some lensing parameters, 
+              including the most important mass-related parameters. With this promising preliminary
+              result, we believe the ViT network architecture can be an important tool for strong 
+              lensing science for the next generation of surveys. 
+              <!-- TODO link to https://github.com/kuanweih/strong_lensing_vit_resnet -->
             </p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4">
             <div class="img-holder-2 animate-box">
               <img src="images/pj-8.png" height=100% width=100%>
             </div>
