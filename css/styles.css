@@ -233,7 +233,7 @@ nav a:hover::after {
   }
 }
 
-/* About Section */
+/* About Section with Timeline */
 .about {
   padding: 8rem 0;
   background: radial-gradient(
@@ -287,22 +287,99 @@ nav a:hover::after {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr;
   gap: 4rem;
   align-items: start;
 }
 
-.about-text {
+.about-intro {
   font-size: 1.1rem;
   color: #4a4a4a;
   line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
 }
 
-.about-text p {
+.about-intro p {
   margin-bottom: 1.5rem;
 }
 
-.about-credentials {
+/* Timeline Styles */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #8b7355 5%,
+    #8b7355 95%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.timeline-year {
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  width: 80px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #8b7355;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.timeline-node {
+  position: absolute;
+  left: 87px;
+  top: 2.5rem;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 115, 85, 0.9) 0%,
+    rgba(139, 115, 85, 0.7) 70%,
+    rgba(139, 115, 85, 0.5) 100%
+  );
+  border: 3px solid #faf9f7;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-node:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.4);
+}
+
+.timeline-content {
+  margin-left: 140px;
   background: radial-gradient(
       ellipse 300px 200px at 20% 30%,
       rgba(248, 246, 243, 0.8) 0%,
@@ -317,25 +394,55 @@ nav a:hover::after {
   padding: 2rem;
   border-left: 4px solid #8b7355;
   border-radius: 0 15px 15px 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  transition: all 0.3s ease;
+  min-height: 120px;
 }
 
-.credential-item {
-  margin-bottom: 1.5rem;
+.timeline-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(139, 115, 85, 0.15);
 }
 
-.credential-item h4 {
-  font-size: 1.1rem;
-  color: #8b7355;
-  margin-bottom: 0.5rem;
+.timeline-title {
+  font-size: 1.2rem;
   font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
 }
 
-.credential-item p {
+.timeline-role {
+  font-size: 1rem;
+  color: #8b7355;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.timeline-description {
   font-size: 0.95rem;
   color: #5a5a5a;
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.timeline-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timeline-tag {
+  font-size: 0.75rem;
+  color: #8b7355;
+  border: 1px solid #8b7355;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(139, 115, 85, 0.05);
+  transition: all 0.2s ease;
+}
+
+.timeline-tag:hover {
+  background: rgba(139, 115, 85, 0.1);
+  transform: translateY(-1px);
 }
 
 /* Research & Work Section */
@@ -768,6 +875,36 @@ footer::before {
   nav ul {
     gap: 1rem;
   }
+
+  /* Timeline mobile responsive */
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline-year {
+    width: 50px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-node {
+    left: 47px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-content {
+    margin-left: 90px;
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-title::after {
+    right: -30px;
+    font-size: 1.5rem;
+  }
 }
 
 /* Subtle animations */
@@ -790,4 +927,27 @@ footer::before {
 .contact-content,
 .publication-list {
   animation: fadeInUp 1s ease forwards;
+}
+
+/* Timeline animations */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.timeline-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.timeline-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.timeline-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.timeline-item:nth-child(5) {
+  animation-delay: 0.5s;
 }

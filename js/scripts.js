@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Observe elements for animation
   const animateElements = document.querySelectorAll(
-    ".research-item, .publication-item, .credential-item"
+    ".research-item, .publication-item, .credential-item, .timeline-item"
   );
   animateElements.forEach((el) => {
     observer.observe(el);
@@ -88,6 +88,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     item.addEventListener("mouseleave", () => {
       visual.style.transform = "scale(1)";
+    });
+  });
+
+  // Add hover effects to timeline items
+  const timelineItems = document.querySelectorAll(".timeline-item");
+  timelineItems.forEach((item) => {
+    const node = item.querySelector(".timeline-node");
+    const content = item.querySelector(".timeline-content");
+
+    item.addEventListener("mouseenter", () => {
+      node.style.transform = "scale(1.1)";
+      node.style.boxShadow = "0 4px 15px rgba(139, 115, 85, 0.4)";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      node.style.transform = "scale(1)";
+      node.style.boxShadow = "0 2px 8px rgba(139, 115, 85, 0.2)";
     });
   });
 
@@ -194,6 +211,33 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   createMobileMenu();
+
+  // Timeline scroll reveal animation
+  const timelineObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px",
+    }
+  );
+
+  // Observe timeline items for staggered animation
+  const timelineItemsForAnimation = document.querySelectorAll(".timeline-item");
+  timelineItemsForAnimation.forEach((item, index) => {
+    item.style.opacity = "0";
+    item.style.transform = "translateY(30px)";
+    item.style.transition = `opacity 0.6s ease ${
+      index * 0.1
+    }s, transform 0.6s ease ${index * 0.1}s`;
+    timelineObserver.observe(item);
+  });
 });
 
 // Add CSS for mobile menu via JavaScript
