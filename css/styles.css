@@ -67,7 +67,7 @@ nav .container {
 }
 
 .logo::after {
-  content: "智";
+  content: "維";
   position: absolute;
   right: -30px;
   top: -5px;
