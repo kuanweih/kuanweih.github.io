@@ -357,13 +357,18 @@ nav a:hover::after {
   opacity: 0.9;
   padding-right: 1.5rem;
   white-space: nowrap;
+  line-height: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* Softer, more organic timeline nodes */
 .timeline-node {
   position: absolute;
   left: 87px;
-  top: 2.5rem;
+  top: 2rem;
   width: 26px;
   height: 26px;
   background: rgba(139, 115, 85, 0.6);
@@ -383,53 +388,26 @@ nav a:hover::after {
 
 .timeline-content {
   margin-left: 120px;
-  background: radial-gradient(
-      ellipse 400px 300px at 30% 40%,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(248, 246, 243, 0.7) 100%
-    ),
-    radial-gradient(
-      ellipse 300px 400px at 70% 60%,
-      rgba(245, 243, 240, 0.5) 0%,
-      transparent 70%
-    ),
-    #faf9f7;
+  background: transparent;
   padding: 2rem 2.5rem;
-  border-radius: 20px;
+  border-radius: 0;
   transition: all 0.4s ease;
   min-height: auto;
-  box-shadow: 0 2px 15px rgba(139, 115, 85, 0.08);
-  border: 1px solid rgba(139, 115, 85, 0.1);
+  box-shadow: none;
+  border: none;
   position: relative;
   overflow: hidden;
 }
 
-/* Add subtle texture overlay */
+/* Remove the texture overlay */
 .timeline-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-      circle at 20% 30%,
-      rgba(139, 115, 85, 0.02) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(139, 115, 85, 0.015) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
-  border-radius: 20px;
+  display: none;
 }
 
 .timeline-content:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 8px 30px rgba(139, 115, 85, 0.15);
-  border-color: rgba(139, 115, 85, 0.2);
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
 }
 
 .timeline-title {
