@@ -348,7 +348,7 @@ nav a:hover::after {
 .timeline-year {
   position: absolute;
   left: 0;
-  top: 2.7rem;
+  top: 1.3rem;
   width: 80px;
   text-align: right;
   font-size: 0.85rem;
@@ -368,7 +368,7 @@ nav a:hover::after {
 .timeline-node {
   position: absolute;
   left: 87px;
-  top: 2.7rem;
+  top: 1.3rem;
   width: 26px;
   height: 26px;
   background: rgba(139, 115, 85, 0.6);
