@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Smooth scrolling for anchor links
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
   const ctaButton = document.querySelector('.cta-button[href^="#"]');
+  const heroBtns = document.querySelectorAll('.hero-btn[href^="#"]');
 
   function smoothScroll(e) {
     e.preventDefault();
@@ -27,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (ctaButton) {
     ctaButton.addEventListener("click", smoothScroll);
   }
+
+  // Add smooth scrolling to hero buttons
+  heroBtns.forEach((btn) => {
+    btn.addEventListener("click", smoothScroll);
+  });
 
   // Add active class to navigation based on scroll position
   const sections = document.querySelectorAll("section[id]");
@@ -108,6 +114,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Add hover effects to hero buttons
+  const heroButtons = document.querySelectorAll(".hero-btn");
+  heroButtons.forEach((btn) => {
+    btn.addEventListener("mouseenter", () => {
+      // Add a subtle glow effect
+      btn.style.filter = "brightness(1.05)";
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      btn.style.filter = "brightness(1)";
+    });
+
+    // Add click animation
+    btn.addEventListener("mousedown", () => {
+      btn.style.transform =
+        btn.style.transform.replace("translateY(-", "translateY(-") +
+        " scale(0.98)";
+    });
+
+    btn.addEventListener("mouseup", () => {
+      btn.style.transform = btn.style.transform.replace(" scale(0.98)", "");
+    });
+  });
+
   // Add copy email functionality
   const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
   emailLinks.forEach((link) => {
@@ -185,6 +215,21 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(typeWriter, 1000);
   }
 
+  // Add staggered animation for hero buttons
+  const heroButtonsForAnimation = document.querySelectorAll(".hero-btn");
+  heroButtonsForAnimation.forEach((btn, index) => {
+    btn.style.opacity = "0";
+    btn.style.transform = "translateY(20px)";
+    btn.style.transition = `opacity 0.6s ease ${
+      index * 0.1 + 0.5
+    }s, transform 0.6s ease ${index * 0.1 + 0.5}s`;
+
+    setTimeout(() => {
+      btn.style.opacity = "1";
+      btn.style.transform = "translateY(0)";
+    }, index * 100 + 1500);
+  });
+
   // Add mobile menu toggle (for future mobile optimization)
   function createMobileMenu() {
     const nav = document.querySelector("nav");
@@ -238,6 +283,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }s, transform 0.6s ease ${index * 0.1}s`;
     timelineObserver.observe(item);
   });
+
+  // Add subtle animation to subtitle
+  const subtitle = document.querySelector(".hero-text .subtitle");
+  if (subtitle) {
+    subtitle.style.opacity = "0";
+    subtitle.style.transform = "translateY(15px)";
+    subtitle.style.transition =
+      "opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s";
+
+    setTimeout(() => {
+      subtitle.style.opacity = "0.9";
+      subtitle.style.transform = "translateY(0)";
+    }, 1200);
+  }
 });
 
 // Add CSS for mobile menu via JavaScript
@@ -273,6 +332,10 @@ mobileStyles.textContent = `
         nav a.active {
             color: #8b7355;
             font-weight: 500;
+        }
+
+        .hero-buttons {
+            margin-top: 1rem;
         }
     }
 `;

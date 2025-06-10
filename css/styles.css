@@ -134,11 +134,28 @@ nav a:hover::after {
   line-height: 1.2;
 }
 
+/* Updated subtitle styling */
 .hero-text .subtitle {
-  font-size: 1.2rem;
-  color: #6b6b6b;
+  font-family: "Noto Sans SC", "Inter", serif;
+  font-size: 1.3rem;
+  color: #8b7355;
   margin-bottom: 2rem;
-  font-weight: 300;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+  opacity: 0.9;
+}
+
+.hero-text .subtitle::before {
+  content: "探";
+  position: absolute;
+  left: -40px;
+  top: -5px;
+  font-size: 1.8rem;
+  color: #a08567;
+  opacity: 0.6;
+  font-style: normal;
 }
 
 .hero-text p {
@@ -186,8 +203,10 @@ nav a:hover::after {
   position: relative;
   height: 500px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
 
 .profile-container {
@@ -271,6 +290,114 @@ nav a:hover::after {
 }
 
 .profile-placeholder:hover::before {
+  left: 100%;
+}
+
+/* New Hero Buttons Styling */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-btn {
+  padding: 0.7rem 1.8rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.9rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 2px solid transparent;
+}
+
+.hero-btn.primary {
+  background: radial-gradient(
+      ellipse 120px 80px at 40% 30%,
+      rgba(139, 115, 85, 0.9) 0%,
+      rgba(139, 115, 85, 0.8) 100%
+    ),
+    #8b7355;
+  color: white;
+  border-color: rgba(139, 115, 85, 0.3);
+}
+
+.hero-btn.primary:hover {
+  background: radial-gradient(
+      ellipse 140px 100px at 60% 40%,
+      rgba(160, 133, 103, 0.95) 0%,
+      rgba(139, 115, 85, 0.9) 100%
+    ),
+    #a08567;
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow: 0 8px 25px rgba(139, 115, 85, 0.4);
+}
+
+.hero-btn.secondary {
+  background: radial-gradient(
+      ellipse 100px 60px at 30% 40%,
+      rgba(245, 243, 240, 0.9) 0%,
+      rgba(250, 249, 247, 0.8) 100%
+    ),
+    rgba(250, 249, 247, 0.8);
+  color: #8b7355;
+  border-color: rgba(139, 115, 85, 0.3);
+}
+
+.hero-btn.secondary:hover {
+  background: radial-gradient(
+      ellipse 120px 80px at 50% 50%,
+      rgba(139, 115, 85, 0.1) 0%,
+      rgba(139, 115, 85, 0.05) 100%
+    ),
+    rgba(245, 243, 240, 0.9);
+  transform: translateY(-2px) rotate(1deg);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.2);
+  border-color: rgba(139, 115, 85, 0.5);
+}
+
+.hero-btn.tertiary {
+  background: transparent;
+  color: #8b7355;
+  border-color: rgba(139, 115, 85, 0.4);
+}
+
+.hero-btn.tertiary:hover {
+  background: radial-gradient(
+      ellipse 100px 60px at 50% 50%,
+      rgba(139, 115, 85, 0.05) 0%,
+      transparent 70%
+    ),
+    rgba(139, 115, 85, 0.03);
+  transform: translateY(-1px);
+  border-color: rgba(139, 115, 85, 0.6);
+  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.15);
+}
+
+/* Add subtle animation to buttons */
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+  border-radius: 25px;
+}
+
+.hero-btn:hover::before {
   left: 100%;
 }
 
@@ -998,9 +1125,28 @@ footer::before {
     font-size: 2.5rem;
   }
 
+  .hero-text .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-text .subtitle::before {
+    left: -30px;
+    font-size: 1.5rem;
+  }
+
   .profile-container {
     width: 220px;
     height: 220px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
   }
 
   .calligraphy-portrait-1 {
