@@ -147,17 +147,6 @@ nav a:hover::after {
   opacity: 0.9;
 }
 
-.hero-text .subtitle::before {
-  content: "探";
-  position: absolute;
-  left: -40px;
-  top: -5px;
-  font-size: 1.8rem;
-  color: #a08567;
-  opacity: 0.6;
-  font-style: normal;
-}
-
 .hero-text p {
   font-size: 1rem;
   color: #5a5a5a;
