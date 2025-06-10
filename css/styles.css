@@ -181,6 +181,7 @@ nav a:hover::after {
   box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
 }
 
+/* Updated Profile Photo Section */
 .hero-visual {
   position: relative;
   height: 500px;
@@ -189,35 +190,131 @@ nav a:hover::after {
   justify-content: center;
 }
 
+.profile-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(139, 115, 85, 0.3);
+  box-shadow: 0 8px 32px rgba(139, 115, 85, 0.15),
+    inset 0 2px 8px rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 5;
+}
+
+.profile-photo:hover {
+  transform: scale(1.02) rotate(1deg);
+  border-color: rgba(139, 115, 85, 0.5);
+  box-shadow: 0 12px 40px rgba(139, 115, 85, 0.25),
+    inset 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Profile photo placeholder when no image is loaded */
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+      ellipse 200px 150px at 30% 40%,
+      rgba(139, 115, 85, 0.1) 0%,
+      rgba(139, 115, 85, 0.05) 100%
+    ),
+    radial-gradient(
+      ellipse 150px 200px at 70% 60%,
+      rgba(160, 133, 103, 0.08) 0%,
+      transparent 70%
+    ),
+    linear-gradient(135deg, #f5f3f0, #ede9e4);
+  border: 3px solid rgba(139, 115, 85, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8b7355;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(139, 115, 85, 0.25),
+    inset 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.profile-placeholder:hover {
+  transform: scale(1.02) rotate(-1deg);
+  border-color: rgba(139, 115, 85, 0.6);
+  box-shadow: 0 12px 40px rgba(139, 115, 85, 0.35),
+    inset 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+.profile-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.profile-placeholder:hover::before {
+  left: 100%;
+}
+
+/* Calligraphy elements around the profile */
 .calligraphy-element {
   position: absolute;
   font-family: "Noto Sans SC", serif;
   color: #8b7355;
   opacity: 0.6;
   animation: float 6s ease-in-out infinite;
+  z-index: 1;
+  font-weight: 400;
 }
 
-.calligraphy-large {
-  font-size: 8rem;
+.calligraphy-portrait-1 {
+  font-size: 3rem;
   font-weight: 300;
-  right: 20%;
-  top: 10%;
+  top: -15px;
+  right: -25px;
+  animation-delay: 0s;
 }
 
-.calligraphy-medium {
-  font-size: 4rem;
+.calligraphy-portrait-2 {
+  font-size: 2.2rem;
   font-weight: 300;
-  left: 10%;
-  bottom: 20%;
+  bottom: -20px;
+  left: -30px;
   animation-delay: -2s;
 }
 
-.calligraphy-small {
-  font-size: 2rem;
+.calligraphy-portrait-3 {
+  font-size: 3.5rem;
   font-weight: 300;
-  right: 40%;
-  bottom: 40%;
+  top: 35%;
+  right: -60px;
   animation-delay: -4s;
+}
+
+.calligraphy-portrait-4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  top: 15%;
+  left: -45px;
+  animation-delay: -1s;
 }
 
 @keyframes float {
@@ -230,6 +327,30 @@ nav a:hover::after {
   }
   66% {
     transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+/* Background decorative elements */
+.profile-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(139, 115, 85, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+  animation: slowRotate 20s linear infinite;
+}
+
+@keyframes slowRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -877,6 +998,27 @@ footer::before {
     font-size: 2.5rem;
   }
 
+  .profile-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .calligraphy-portrait-1 {
+    font-size: 2rem;
+  }
+
+  .calligraphy-portrait-2 {
+    font-size: 1.5rem;
+  }
+
+  .calligraphy-portrait-3 {
+    font-size: 2.5rem;
+  }
+
+  .calligraphy-portrait-4 {
+    font-size: 1.2rem;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -884,10 +1026,6 @@ footer::before {
 
   .research-item {
     grid-template-columns: 1fr;
-  }
-
-  .calligraphy-large {
-    font-size: 6rem;
   }
 
   .contact-info {
