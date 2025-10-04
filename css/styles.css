@@ -176,191 +176,6 @@ nav a:hover::after {
   height: 280px;
 }
 
-/* Profile photo placeholder when no image is loaded */
-.profile-placeholder {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(
-      ellipse 200px 150px at 30% 40%,
-      rgba(139, 115, 85, 0.1) 0%,
-      rgba(139, 115, 85, 0.05) 100%
-    ),
-    radial-gradient(
-      ellipse 150px 200px at 70% 60%,
-      rgba(160, 133, 103, 0.08) 0%,
-      transparent 70%
-    ),
-    linear-gradient(135deg, #f5f3f0, #ede9e4);
-  border: 3px solid rgba(139, 115, 85, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #8b7355;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 32px rgba(139, 115, 85, 0.25),
-    inset 0 2px 8px rgba(255, 255, 255, 0.3);
-}
-
-.profile-placeholder:hover {
-  transform: scale(1.02) rotate(-1deg);
-  border-color: rgba(139, 115, 85, 0.6);
-  box-shadow: 0 12px 40px rgba(139, 115, 85, 0.35),
-    inset 0 2px 8px rgba(255, 255, 255, 0.4);
-}
-
-.profile-placeholder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transition: left 0.6s ease;
-}
-
-.profile-placeholder:hover::before {
-  left: 100%;
-}
-
-/* New Hero Buttons Styling */
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.hero-btn {
-  padding: 0.7rem 1.8rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 0.9rem;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  border: 2px solid transparent;
-}
-
-.hero-btn.primary {
-  background: radial-gradient(
-      ellipse 120px 80px at 40% 30%,
-      rgba(139, 115, 85, 0.9) 0%,
-      rgba(139, 115, 85, 0.8) 100%
-    ),
-    #8b7355;
-  color: white;
-  border-color: rgba(139, 115, 85, 0.3);
-}
-
-.hero-btn.primary:hover {
-  background: radial-gradient(
-      ellipse 140px 100px at 60% 40%,
-      rgba(160, 133, 103, 0.95) 0%,
-      rgba(139, 115, 85, 0.9) 100%
-    ),
-    #a08567;
-  transform: translateY(-3px) rotate(-1deg);
-  box-shadow: 0 8px 25px rgba(139, 115, 85, 0.4);
-}
-
-.hero-btn.secondary {
-  background: radial-gradient(
-      ellipse 100px 60px at 30% 40%,
-      rgba(245, 243, 240, 0.9) 0%,
-      rgba(250, 249, 247, 0.8) 100%
-    ),
-    rgba(250, 249, 247, 0.8);
-  color: #8b7355;
-  border-color: rgba(139, 115, 85, 0.3);
-}
-
-.hero-btn.secondary:hover {
-  background: radial-gradient(
-      ellipse 120px 80px at 50% 50%,
-      rgba(139, 115, 85, 0.1) 0%,
-      rgba(139, 115, 85, 0.05) 100%
-    ),
-    rgba(245, 243, 240, 0.9);
-  transform: translateY(-2px) rotate(1deg);
-  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.2);
-  border-color: rgba(139, 115, 85, 0.5);
-}
-
-.hero-btn.tertiary {
-  background: transparent;
-  color: #8b7355;
-  border-color: rgba(139, 115, 85, 0.4);
-}
-
-.hero-btn.tertiary:hover {
-  background: radial-gradient(
-      ellipse 100px 60px at 50% 50%,
-      rgba(139, 115, 85, 0.05) 0%,
-      transparent 70%
-    ),
-    rgba(139, 115, 85, 0.03);
-  transform: translateY(-1px);
-  border-color: rgba(139, 115, 85, 0.6);
-  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.15);
-}
-
-/* Add subtle animation to buttons */
-.hero-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.6s ease;
-  border-radius: 25px;
-}
-
-.hero-btn:hover::before {
-  left: 100%;
-}
-
-/* Calligraphy elements around the profile */
-.calligraphy-element {
-  position: absolute;
-  font-family: "Noto Sans SC", serif;
-  color: #8b7355;
-  opacity: 0.6;
-  animation: float 6s ease-in-out infinite;
-  z-index: 1;
-  font-weight: 400;
-}
-
-.calligraphy-portrait-1 {
-  font-size: 3rem;
-  font-weight: 300;
-  top: -15px;
-  right: -25px;
-  animation-delay: 0s;
-}
-
 @keyframes float {
   0%,
   100% {
@@ -398,40 +213,6 @@ nav a:hover::after {
   }
 }
 
-/* About Section with Timeline */
-.about {
-  padding: 8rem 0;
-  background: radial-gradient(
-      ellipse 600px 400px at 15% 50%,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(255, 255, 255, 0.7) 100%
-    ),
-    radial-gradient(
-      ellipse 400px 600px at 85% 20%,
-      rgba(248, 246, 243, 0.8) 0%,
-      transparent 70%
-    ),
-    white;
-  position: relative;
-}
-
-.about::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: radial-gradient(
-      ellipse 200px 50px at 20% 50%,
-      #8b7355 0%,
-      transparent 70%
-    ),
-    radial-gradient(ellipse 150px 30px at 60% 50%, #a08567 0%, transparent 70%),
-    radial-gradient(ellipse 180px 40px at 85% 50%, #8b7355 0%, transparent 70%);
-  opacity: 0.6;
-}
-
 .section-title {
   font-size: 2.5rem;
   font-weight: 300;
@@ -448,26 +229,6 @@ nav a:hover::after {
   font-size: 2rem;
   color: #8b7355;
   opacity: 0.5;
-}
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.about-intro {
-  font-size: 1.1rem;
-  color: #4a4a4a;
-  line-height: 1.8;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 4rem;
-}
-
-.about-intro p {
-  margin-bottom: 1.5rem;
 }
 
 /* Timeline Styles - Updated for cleaner wabi-sabi aesthetic */
@@ -924,105 +685,6 @@ nav a:hover::after {
   box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
 }
 
-/* Contact Section */
-.contact {
-  padding: 8rem 0;
-  background: radial-gradient(
-      ellipse 700px 400px at 30% 60%,
-      rgba(250, 249, 247, 0.9) 0%,
-      rgba(250, 249, 247, 0.7) 100%
-    ),
-    radial-gradient(
-      ellipse 500px 600px at 80% 30%,
-      rgba(245, 243, 240, 0.6) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 300px 200px at 10% 90%,
-      rgba(139, 115, 85, 0.03) 0%,
-      transparent 80%
-    ),
-    #faf9f7;
-  text-align: center;
-  position: relative;
-}
-
-.contact::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background: radial-gradient(
-      ellipse 200px 30px at 30% 50%,
-      #8b7355 0%,
-      transparent 70%
-    ),
-    radial-gradient(ellipse 150px 25px at 70% 50%, #a08567 0%, transparent 70%);
-  opacity: 0.4;
-  border-radius: 50%;
-}
-
-.contact .section-title::after {
-  content: "联";
-}
-
-.contact-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 3rem;
-  flex-wrap: wrap;
-}
-
-.contact-item {
-  text-align: center;
-}
-
-.contact-item h4 {
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  color: #2c2c2c;
-}
-
-.contact-item a {
-  color: #8b7355;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.contact-item a:hover {
-  opacity: 0.7;
-}
-
-/* Footer */
-footer {
-  background: #2c2c2c;
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.9rem;
-  position: relative;
-}
-
-footer::before {
-  content: "恒";
-  position: absolute;
-  right: 50%;
-  top: -20px;
-  transform: translateX(50%);
-  font-size: 1.5rem;
-  color: #8b7355;
-  opacity: 0.7;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content {
@@ -1043,35 +705,9 @@ footer::before {
     height: 220px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
   .hero-btn {
     padding: 0.6rem 1.5rem;
     font-size: 0.85rem;
-  }
-
-  .calligraphy-portrait-1 {
-    font-size: 2rem;
-  }
-
-  .calligraphy-portrait-2 {
-    font-size: 1.5rem;
-  }
-
-  .calligraphy-portrait-3 {
-    font-size: 2.5rem;
-  }
-
-  .calligraphy-portrait-4 {
-    font-size: 1.2rem;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .research-item {
@@ -1122,14 +758,6 @@ footer::before {
     font-size: 1.2rem;
   }
 
-  .timeline-tags {
-    display: none;
-  }
-
-  .timeline-tag {
-    display: none;
-  }
-
   .section-title {
     font-size: 2rem;
   }
@@ -1138,13 +766,6 @@ footer::before {
     right: -30px;
     font-size: 1.5rem;
   }
-}
-
-/* Subtle animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
 }
 
 @keyframes fadeInUp {
@@ -1205,8 +826,6 @@ footer::before {
   box-shadow: 0 12px 40px rgba(139, 115, 85, 0.35),
     inset 0 2px 8px rgba(255, 255, 255, 0.4);
 }
-
-/* Hero Links - Clean inline style */
 
 .hero-links {
   margin-top: 1.5rem;
