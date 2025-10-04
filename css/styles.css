@@ -67,13 +67,17 @@ nav .container {
 }
 
 .logo::after {
-  content: "維";
+  content: "冠維";
   position: absolute;
-  right: -30px;
-  top: -5px;
-  font-size: 1.2rem;
+  left: 100%; /* Position it at the end of the text */
+  margin-left: 10px; /* Add spacing to the right of "Wei" */
+  top: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  animation: float 6s ease-in-out infinite;
   color: #8b7355;
   opacity: 0.7;
+  white-space: nowrap; /* Keep characters horizontal */
 }
 
 nav ul {
