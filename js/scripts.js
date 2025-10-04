@@ -2,8 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Smooth scrolling for anchor links
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
-  const ctaButton = document.querySelector('.cta-button[href^="#"]');
-  const heroBtns = document.querySelectorAll('.hero-btn[href^="#"]');
 
   function smoothScroll(e) {
     e.preventDefault();
@@ -23,15 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", smoothScroll);
-  });
-
-  if (ctaButton) {
-    ctaButton.addEventListener("click", smoothScroll);
-  }
-
-  // Add smooth scrolling to hero buttons
-  heroBtns.forEach((btn) => {
-    btn.addEventListener("click", smoothScroll);
   });
 
   // Add active class to navigation based on scroll position
@@ -76,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Observe elements for animation
   const animateElements = document.querySelectorAll(
-    ".research-item, .publication-item, .credential-item, .timeline-item"
+    ".research-item, .publication-item, .timeline-item"
   );
   animateElements.forEach((el) => {
     observer.observe(el);
@@ -111,30 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("mouseleave", () => {
       node.style.transform = "scale(1)";
       node.style.boxShadow = "0 2px 8px rgba(139, 115, 85, 0.2)";
-    });
-  });
-
-  // Add hover effects to hero buttons
-  const heroButtons = document.querySelectorAll(".hero-btn");
-  heroButtons.forEach((btn) => {
-    btn.addEventListener("mouseenter", () => {
-      // Add a subtle glow effect
-      btn.style.filter = "brightness(1.05)";
-    });
-
-    btn.addEventListener("mouseleave", () => {
-      btn.style.filter = "brightness(1)";
-    });
-
-    // Add click animation
-    btn.addEventListener("mousedown", () => {
-      btn.style.transform =
-        btn.style.transform.replace("translateY(-", "translateY(-") +
-        " scale(0.98)";
-    });
-
-    btn.addEventListener("mouseup", () => {
-      btn.style.transform = btn.style.transform.replace(" scale(0.98)", "");
     });
   });
 
@@ -179,23 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add parallax effect to calligraphy elements
-  const calligraphyElements = document.querySelectorAll(".calligraphy-element");
-
-  function parallaxScroll() {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-
-    calligraphyElements.forEach((element, index) => {
-      const speed = 0.5 + index * 0.2;
-      element.style.transform = `translateY(${rate * speed}px) rotate(${
-        scrolled * 0.01
-      }deg)`;
-    });
-  }
-
-  window.addEventListener("scroll", parallaxScroll);
-
   // Add typing effect to hero title (optional enhancement)
   const heroTitle = document.querySelector(".hero-text h1");
   if (heroTitle) {
@@ -214,21 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start typing effect after a short delay
     setTimeout(typeWriter, 1000);
   }
-
-  // Add staggered animation for hero buttons
-  const heroButtonsForAnimation = document.querySelectorAll(".hero-btn");
-  heroButtonsForAnimation.forEach((btn, index) => {
-    btn.style.opacity = "0";
-    btn.style.transform = "translateY(20px)";
-    btn.style.transition = `opacity 0.6s ease ${
-      index * 0.1 + 0.5
-    }s, transform 0.6s ease ${index * 0.1 + 0.5}s`;
-
-    setTimeout(() => {
-      btn.style.opacity = "1";
-      btn.style.transform = "translateY(0)";
-    }, index * 100 + 1500);
-  });
 
   // Add mobile menu toggle (for future mobile optimization)
   function createMobileMenu() {
