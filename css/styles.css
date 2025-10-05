@@ -592,38 +592,12 @@ nav a:hover::after {
 
 .publication-item {
   padding: 2rem 0;
-  border-bottom: 2px solid;
-  border-image: radial-gradient(
-      ellipse 200px 50px at 20% 50%,
-      rgba(139, 115, 85, 0.2) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 150px 40px at 60% 50%,
-      rgba(139, 115, 85, 0.15) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-        ellipse 180px 60px at 90% 50%,
-        rgba(139, 115, 85, 0.1) 0%,
-        transparent 70%
-      )
-      1;
-  transition: all 0.4s ease;
-  border-radius: 10px;
+  border-bottom: 1px solid rgba(139, 115, 85, 0.15);
+  transition: all 0.3s ease;
 }
 
 .publication-item:hover {
-  background: radial-gradient(
-      ellipse 400px 200px at 50% 50%,
-      rgba(250, 249, 247, 0.8) 0%,
-      rgba(250, 249, 247, 0.4) 100%
-    ),
-    #faf9f7;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  transform: translateX(5px);
-  border-radius: 15px;
+  padding-left: 0.5rem;
 }
 
 .publication-item:last-child {
