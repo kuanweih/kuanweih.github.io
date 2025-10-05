@@ -1,5 +1,25 @@
+// Load shared navigation
+function loadNavigation() {
+  const navPlaceholder = document.querySelector("nav");
+  if (navPlaceholder) {
+    navPlaceholder.innerHTML = `
+      <div class="container">
+        <a href="index.html" class="logo">Kuan-Wei</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </div>
+    `;
+  }
+}
+
 // Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", function () {
+  // Load navigation first
+  loadNavigation();
+
   // Smooth scrolling for anchor links
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
