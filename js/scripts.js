@@ -7,7 +7,6 @@ function loadNavigation() {
         <a href="index.html" class="logo">Kuan-Wei</a>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
           <li><a href="publications.html">Publications</a></li>
         </ul>
       </div>
