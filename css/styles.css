@@ -649,8 +649,27 @@ nav a:hover::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Extra top padding so the photo clears the fixed nav, since the
+     mobile hero-visual no longer cushions it below the bar */
+  .hero {
+    padding-top: 8rem;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Let the photo block shrink to the photo instead of a fixed 500px,
+     so the name sits close beneath it */
+  .hero-visual {
+    height: auto;
+  }
+
+  /* Scale the decorative ring down to suit the smaller mobile photo */
+  .profile-container::after {
+    width: 260px;
+    height: 260px;
   }
 
   .hero-text .subtitle {
