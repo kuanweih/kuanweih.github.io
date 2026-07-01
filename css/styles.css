@@ -107,6 +107,7 @@ nav a:hover::after {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 2.5rem;
 }
 
 .hero-content {
