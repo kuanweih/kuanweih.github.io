@@ -570,7 +570,7 @@ nav a:hover::after {
 }
 
 .publications .section-title::after {
-  content: "文";
+  display: none;
 }
 
 .publication-list {
